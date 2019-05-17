@@ -14,12 +14,12 @@ public class Places {
 
                if ((str.charAt(b) == 'a')||(str.charAt(b) == 'e')||(str.charAt(b) == 'i')||(str.charAt(b) == 'o')||(str.charAt(b) == 'u')){
                   str= str.replaceAll("[AaEeIiOoUu]", "");
-                   result[i]=str.toString();
+                   result[i]=str.toString();                                    //check if vowels are present
                }
                else if(str=="")
                {
                    System.out.println("Input string cannot be null");
-                   result[i]=str.toString();
+                   result[i]=str.toString();                                     //check if string is null
                }
                else
                {

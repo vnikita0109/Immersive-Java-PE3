@@ -13,10 +13,10 @@ public class ConsecutiveSequence {
         int[] num=new int[length];
 
         for (int i=0;i<length;i++){
-            num[i]=Integer.parseInt(numbers[i]);
+            num[i]=Integer.parseInt(numbers[i]);  //to examine each integer
         }
 
-        Arrays.sort(num);
+        Arrays.sort(num);                           //sorting the sequence of integers
         String flag="Consecutive";
         for (int x=0;x<num.length-1;x++)
         {

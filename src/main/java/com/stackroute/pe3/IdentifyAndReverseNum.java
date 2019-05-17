@@ -5,7 +5,7 @@ public class IdentifyAndReverseNum {
     public String[] EvenOdd(int[] num)
     {
         String[] result=new String[num.length];
-        for(int i=0;i<num.length;i++) {
+        for(int i=0;i<num.length;i++) {                     //check if number is even or odd
             if (num[i] % 2 == 0)
                result[i]="Even";
             else
@@ -18,7 +18,7 @@ public class IdentifyAndReverseNum {
         int i,count=0;
 
 
-            for (i = 0; i < num.length; i++) {
+            for (i = 0; i < num.length; i++) {                    //check if number is prime and remove it
 
                 for (int j = 2; j < num[i]; j++) {
                     if ((num[i] % j) == 0) {
@@ -47,7 +47,7 @@ public class IdentifyAndReverseNum {
 
         return composite;
     }
-    public int[] ReverseNum(int [] num)
+    public int[] ReverseNum(int [] num)                    //make number reverse and return
     {
         int i,j=num.length;
         int[] arr=new int[j];

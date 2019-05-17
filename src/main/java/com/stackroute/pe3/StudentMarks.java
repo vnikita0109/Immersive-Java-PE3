@@ -27,7 +27,7 @@ public class StudentMarks{
         public static String[] fun(int[] stuGrades) {
             String[] result = new String[stuGrades.length];
 
-            for (int i = 0; i < stuGrades.length; i++) {
+            for (int i = 0; i < stuGrades.length; i++) {                      //to check grades corresponding to conditions
 
                 if (stuGrades[i] < 0) {
                     result[i] = "Input is less than lowest value, enter a valid input";

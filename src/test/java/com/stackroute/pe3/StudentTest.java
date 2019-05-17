@@ -1,5 +1,7 @@
 package com.stackroute.pe3;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -7,16 +9,36 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class StudentTest {
 
-    StudentMarks std=new StudentMarks();
+    StudentMarks std;
 
     int[] arr={45,-8,126};
+    @Before
+    public void setUp()
+    {
+        //arrange
+       std=new StudentMarks();
+
+        System.out.println("Inside Before");
+
+    }
+
 
     @Test
-        public void CheckInputGrades()
+        public void checkInputGrades()
         {
            String[] ExpectedResult={"true","Input is less than lowest value, enter a valid input","Input is greater than highest value, enter a valid input"};
            String[] Result=std.fun(arr);
            assertArrayEquals(ExpectedResult,Result);
         }
+
+    @After
+    public void tearDown()
+    {
+        //arrange
+        std=null;
+
+        System.out.println("Inside After");
+
+    }
 
 }

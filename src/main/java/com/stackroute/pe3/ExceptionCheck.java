@@ -3,7 +3,7 @@ package com.stackroute.pe3;
 public class ExceptionCheck {
 
 
-    public void CheckArraySize(int[] arr) throws Exception {
+    public void CheckArraySize(int[] arr) throws Exception {            //using exception class to throw exception
 
         if (arr == null) {
 

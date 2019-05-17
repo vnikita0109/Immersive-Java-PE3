@@ -1,5 +1,7 @@
 package com.stackroute.pe3;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -7,10 +9,20 @@ import static org.junit.Assert.assertEquals;
 
 public class JoinAndMergeTest {
 
-    JoinAndMerge jm=new JoinAndMerge();
+    JoinAndMerge jm;
     String[] array1={"abc"};
     String[] array2={"def","def","jkl"};
     String[] array3={"pqr","stu","xyz"};
+
+    @Before
+    public void setUp()
+    {
+        //arrange
+        jm=new JoinAndMerge();
+
+        System.out.println("Inside Before");
+
+    }
 
     @Test
     public void CompareIfOneOfStringsIsNullOrWithDiffLengthTest(){
@@ -48,5 +60,14 @@ public class JoinAndMergeTest {
         String[] ExpectedResult={"stu","def","def","jkl"};
         String[] Result=jm.prependArrays(array2,array3);
         assertArrayEquals(ExpectedResult,Result);
+    }
+    @After
+    public void tearDown()
+    {
+        //arrange
+        jm=null;
+
+        System.out.println("Inside After");
+
     }
 }

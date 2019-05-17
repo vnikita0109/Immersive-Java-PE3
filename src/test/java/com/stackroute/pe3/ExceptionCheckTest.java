@@ -1,14 +1,22 @@
 package com.stackroute.pe3;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class ExceptionCheckTest {
 
-    ExceptionCheck obj=new ExceptionCheck();
+    ExceptionCheck obj;
 
+    @Before
+    public void SetUp()
+    {
+        //arrange
+       obj= new ExceptionCheck();
+    }
 
     @Test(expected = NullPointerException.class)
-    public void ChkNullPointerException() throws Exception
+    public void chkNullPointerException() throws Exception
     {
         int[] arr=null;
         obj.CheckArraySize(arr);
@@ -16,7 +24,7 @@ public class ExceptionCheckTest {
     }
 
     @Test(expected = NegativeArraySizeException.class)
-    public void ChkNegativeArraySizeException() throws Exception
+    public void chkNegativeArraySizeException() throws Exception
     {
         int[] arr=new int[-2];
 
@@ -24,9 +32,15 @@ public class ExceptionCheckTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void IndexOutOfBoundsException() throws Exception
+    public void indexOutOfBoundsException() throws Exception
     {
         int[] arr=new int[0];
         obj.CheckArraySize(arr);
+    }
+    @After
+    public void tearDown()
+    {
+        //arrange
+        obj= null;
     }
 }

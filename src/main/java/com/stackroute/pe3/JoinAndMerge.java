@@ -11,7 +11,7 @@ public class JoinAndMerge {
         if (x.length == y.length) {
 
             for (int i = 0; i < x.length; i++) {
-                for (int j = 0; j < y.length; j++) {
+                for (int j = 0; j < y.length; j++) {            //comparing elements
                     if (x[i] == y[j]) {
                         status = true;
                         break;
@@ -31,7 +31,7 @@ public class JoinAndMerge {
             return result="Not Equal";
 
     }
-    public String[] RemDuplicates(String[] arr)
+    public String[] RemDuplicates(String[] arr)             //removing duplicates
     {
         int size=arr.length;
 
@@ -51,7 +51,7 @@ public class JoinAndMerge {
         return temp;
     }
 
-    public String[] appendArrays(String[] x,String[] y)
+    public String[] appendArrays(String[] x,String[] y)             //to append first element of second array to first array
     {
         int i;
         int j=0;
@@ -63,7 +63,7 @@ public class JoinAndMerge {
         result[result.length-1]=x[0];
         return result;
     }
-    public String[] prependArrays(String[] x,String[] y)
+    public String[] prependArrays(String[] x,String[] y)                // to prepend mid element of first array to second array
     {
         int i;
         int j=1;
